@@ -1,19 +1,11 @@
-katz_deli = []
 
-take_a_number(katz_deli, "Ada")
-take_a_number(katz_deli, "Logan")
-take_a_number(katz_deli, "Spencer")
 
-line(katz_deli)
-
-now_serving(katz_deli)
-
-line(katz_deli)
-
-take_a_number(katz_deli, "Joan")
-
-line(katz_deli)
-
-now_serving(katz_deli)
-
-line(katz_deli)
+def line(katz_deli)
+  if katz_deli.empty?
+    puts "The line is currently empty."
+  else
+    katz_deli.each.with_index(1) do |name, index|
+      puts "The line is currently: #{index}. << #{name}"
+    end
+  end
+end
